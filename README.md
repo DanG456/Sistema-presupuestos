@@ -5,7 +5,9 @@ Sistema de gestión y creción de presupuestos front-end básico y enfasis en el
 Se necesita clonar el repositorio y desde visual studio code seguir los siguientes pasos:
 
 1.- En una terminal installar los modulos necesarios (indicados en package.json) por por medio del comando:
+
   npm install
 
 2.- Iniciar la aplicación por medio del comando:
+
   node app.js
