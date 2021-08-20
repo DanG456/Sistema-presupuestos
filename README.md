@@ -8,6 +8,6 @@ Se necesita clonar el repositorio y desde visual studio code seguir los siguient
 
   npm install
 
-2.- Iniciar la aplicación por medio del comando:
+2.- Iniciar la aplicación por medio del comando (en terminal):
 
-  node app.js
+  npm run dev
