@@ -2,9 +2,20 @@ const Sequelize = require("sequelize");
 const modelBudget = require("../models/presupuestos.models");
 const modelUsers = require("../models/users.model")
 
-const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
-    host: "localhost",
+const sequelize = new Sequelize(process.env.DB_NAME, null, null, {
     dialect: "mssql",
+    server: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    dialectOptions: {
+        authentication: {
+            type: 'default',
+            options: {
+                encrypt: true,
+                userName: process.env.DB_USER,
+                password: process.env.DB_PASS,
+            }
+        },
+    }
   });
 
 const Budget = modelBudget(sequelize, Sequelize);
