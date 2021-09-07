@@ -6,7 +6,12 @@ module.exports =(sequelize, type) =>{
             autoIncrement: true
         },
         username: DataTypes.STRING,
-        email: type.STRING,
-        password:type.STRING(150),
+        email: {
+            type: DataTypes.STRING(50),
+            validate: {
+                isEmail: true
+            },
+        },
+        password: Datatypes.STRING(150),
     })
 }
