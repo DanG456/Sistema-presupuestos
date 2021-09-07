@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container">
+        <h3 class="mt-3">Resumen financiero</h3>
+
+        <label for="exampleInputEmail1">Nombre del proyecto</label>
+            <input type="email" class="form-control" id="nameProject" aria-describedby="emailHelp" placeholder="Nombre del proyecto">
+        <label for="exampleInputEmail1">Versión del proyecto</label>
+            <input type="email" class="form-control" id="versionProject" aria-describedby="emailHelp" placeholder="1.0.0">
+    
+        <label for="exampleInputEmail1">Ventas</label>
+            <input type="email" class="form-control" id="user" aria-describedby="emailHelp" placeholder="" readonly>
+            <label for="exampleInputEmail1">Costos</label>
+            <input type="email" class="form-control" id="user" aria-describedby="emailHelp" placeholder="" readonly>
+            <label for="exampleInputEmail1">Margen</label>
+            <input type="email" class="form-control" id="user" aria-describedby="emailHelp" placeholder="" readonly>
+            <label for="exampleInputEmail1">%</label>
+            <input type="email" class="form-control" id="user" aria-describedby="emailHelp" placeholder="" readonly>
+
+        <div class="my-3">
+            <h3>Flujo de efectivo</h3>
+            <button class="btn btn-success" onclick="appendColumn('table-flujo')">Agregar columna +</button>
+            <button class="btn btn-danger">Eliminar columna -</button>
+            <table class="table" id="table-flujo">
+                <thead>
+                  <tr>
+                    <th scope="col">Titulos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Ingresos</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Egresos</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Total</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Acumulado</th>
+                  </tr>
+
+                  <tr id="rowPresupuesto">
+        
+                  </tr>
+                  <template id="template-presupuesto">
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>07/08/2021</td>
+                      <td>E-Commerce</td>
+                      <td>1.0</td>
+                      <td><button class="btn btn-warning">Editar</button></td>
+                      <td><button class="btn btn-danger">Eliminar</button></td>
+                      <td><button class="btn btn-info">Enviar</button></td>
+                    </tr>
+                  </template>
+                </tbody>
+              </table>
+        </div>
+        
+        <div class="my-3">
+            <h3>Estado de resultados</h3>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Titulos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Ventas</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Costos</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Margen</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Saldo final</th>
+                  </tr>
+
+                  <tr id="rowPresupuesto">
+        
+                  </tr>
+                  <template id="template-presupuesto">
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>07/08/2021</td>
+                      <td>E-Commerce</td>
+                      <td>1.0</td>
+                      <td><button class="btn btn-warning">Editar</button></td>
+                      <td><button class="btn btn-danger">Eliminar</button></td>
+                      <td><button class="btn btn-info">Enviar</button></td>
+                    </tr>
+                  </template>
+                </tbody>
+              </table>
+        </div>
+
+        <div class="my-3">
+            <h3>Ingresos</h3>
+            <button class="btn btn-success">Agregar fila +</button>
+            <button class="btn btn-danger">Eliminar fila -</button>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Titulos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Concepto</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Total</th>
+                  </tr>
+
+                  <tr id="rowPresupuesto">
+        
+                  </tr>
+                  <template id="template-presupuesto">
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>07/08/2021</td>
+                      <td>E-Commerce</td>
+                      <td>1.0</td>
+                      <td><button class="btn btn-warning">Editar</button></td>
+                      <td><button class="btn btn-danger">Eliminar</button></td>
+                      <td><button class="btn btn-info">Enviar</button></td>
+                    </tr>
+                  </template>
+                </tbody>
+              </table>
+        </div>
+
+        <div class="my-3">
+            <h3>Costos directos</h3>
+            <button class="btn btn-success">Agregar fila +</button>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Titulos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Concepto</th>
+                  </tr>
+                  <tr>
+                    <th scope="row">Total</th>
+                  </tr>
+
+                  <tr id="rowPresupuesto">
+        
+                  </tr>
+                  <template id="template-presupuesto">
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>07/08/2021</td>
+                      <td>E-Commerce</td>
+                      <td>1.0</td>
+                      <td><button class="btn btn-warning">Editar</button></td>
+                      <td><button class="btn btn-danger">Eliminar</button></td>
+                      <td><button class="btn btn-info">Enviar</button></td>
+                    </tr>
+                  </template>
+                </tbody>
+              </table>
+        </div>
+
+        <div class="my-3">
+            <h3>Gastos administrativos</h3>
+        </div>
+
+        <div class="my-3">
+            <h3>Recursos (% de Asignacion)</h3>
+        </div>
+
+        <div class="my-3">
+            <h3>Gastos administrativos</h3>
+        </div>
+
+        <div class="my-3">
+            <h3>Costos</h3>
+        </div>
+
+        <div class="my-3">
+            <h3>Resumen de costos recursos</h3>
+        </div>
+
+        <div class="my-3">
+            <button class="btn btn-primary" onclick="savePresupuesto()">Guardar</button>
+            <button class="btn btn-danger" onclick="cancelPresupuesto()">Cancelar</button>
+        </div>
+
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="./presupuesto.js"></script>
+</html>
