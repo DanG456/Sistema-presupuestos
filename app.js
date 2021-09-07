@@ -5,7 +5,7 @@ const cors = require("cors");
 require("dotenv").config();
 const apiRouter = require("./routes/api");
 const app = express();
-require("./db/connection");
+const sequelize = require("./db/connection");
 const bodyParser = require("body-parser");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
